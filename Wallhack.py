@@ -20,7 +20,7 @@ def main():
             entity = pm.read_int(client + dwEntityList + i * 0x10) # Lê o endereço base da entidade atual
 
             if entity:
-                entity_team_id = pm.read_int(entity + m_iTeamNum) # Lê o endereço m_iTeamNum da entidade atual (m_iTeamNum define qual o seu Team / Equipe.
+                entity_team_id = pm.read_int(entity + m_iTeamNum) # Lê o endereço m_iTeamNum da entidade atual (m_iTeamNum define qual o seu Team / Equipe)
                 entity_glow = pm.read_int(entity + m_iGlowIndex) # Lê o endereço m_iGlowIndex da entidade (m_iGlowIndex, como o nome sugere é o Index da struct Glow)
 
                 if entity_team_id == 2:  # Se a entidade atual for Terroristas
@@ -40,4 +40,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main() #Roda a função main se executado o arquivo diretamente
+    main() # Roda a função main se executado o arquivo diretamente
